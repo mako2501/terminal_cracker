@@ -5,7 +5,7 @@ Created on Oct 4, 2016
 '''
 from random import randint, shuffle
 
-print 'F4 Terminal Coder'
+print 'F4 Terminal Coder - test'
 
 WORD_LENGTH = 10
 DISTRIBUTION_WORDS_LIST = [0,0,0,1,1,1,2,2,3,4]
