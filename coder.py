@@ -51,8 +51,10 @@ def rem_not_integr_words(in_list,not_int_word):
 def get_integreted_random_list(distribution_list, words_list):
     #id slow wylosowanych
     idxlist = []
-    #losowanie slowa
-    idxlist.append(randint(0,len(words_list)-1))
+
+    #losowanie slowa - na podst. tego slowa beda losowane pozostale
+    idxlist.append(randint(0,len(words_list)-1)) 
+
     #licznik petli zabezp infinite loop whilea
     i = 0
     for d in distribution_list:
@@ -88,7 +90,7 @@ for l in fh:
     if (len(line)==WORD_LENGTH and '\'' not in line and ',' not in line and '.' not in line ):
         sample_w.append(line.title()) # 1st ucase
 
-
+#lista slow podobnych do wylosowanego wg listy dystrybucji
 words = get_integreted_random_list(DISTRIBUTION_WORDS_LIST, sample_w)
 #print len(words)
 secretword = words[0]
