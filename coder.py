@@ -4,6 +4,7 @@ Created on Oct 4, 2016
 @author: mako
 '''
 from random import randint, shuffle
+from level_manager import Level_Manager
 
 print 'F4 Terminal Coder - test 2'
 
@@ -13,6 +14,14 @@ gues_word = ''
 gues_words = []
 sample_w = []
 must_number = 4
+
+
+
+#poziom trudnosci 1-4
+lvl = 1
+
+
+
 
 #sprawdza zgodnosc slow i zwraca ilosc takich samych znakow na pozycji
 def get_integrity(a,b):
@@ -98,6 +107,13 @@ secretword = words[0]
 shuffle(words)
 
 iter = must_number
+
+for x in range(1,5):    
+    lm = Level_Manager(x)
+    print lm.actual_level
+    lm.get_dist_list(3)
+
+
 #wlasciwe dzialanie algorytmu
 while (get_integrity(secretword, gues_word)!=len(secretword) and iter>0):
     #print 'secret ',secretword
